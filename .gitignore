@@ -1,5 +1,5 @@
 package-lock.json
-node-rest-shop/*
+node_modules/*
 .idea/*
 
 images/*

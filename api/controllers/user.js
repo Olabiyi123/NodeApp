@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/user');
@@ -54,6 +54,7 @@ exports.user_login =  (req, res, next) => {
             });
         }
         bcrypt.compare(req.body.password, user[0].password, (err, result) => {
+            
             if(err){
                 return res.status(401).json({
                     message: 'Auth failed'
