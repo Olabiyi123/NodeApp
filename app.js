@@ -16,7 +16,7 @@ process.env.MONGO_ATLAS_PW +
     useMongoClient: true
 }*/
 );
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise; 
 
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));
