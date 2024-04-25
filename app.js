@@ -23,6 +23,10 @@ app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to Node Rest Shop!');
+});
+
 const options = {
     definition: {
         openapi : '3.0.0',
